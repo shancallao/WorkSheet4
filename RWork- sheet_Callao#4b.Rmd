@@ -5,3 +5,50 @@ date: "2023-11-08"
 output: pdf_document
 ---
 
+#1
+``` {r num1}
+vectorA <- 1:5
+matrixA <- matrix(0, 5, 5)
+
+for (i in 1:5) {
+  for (j in 1:5) {
+    matrixA[i,j] <- abs(i-j)
+  }
+}
+
+print(matrixA)
+```
+
+#2
+``` {r num2}
+# Use for loop to print * string
+for (i in 1:5) {
+  for (j in 1:i) {
+    cat("* ")
+  }
+  cat("\n")
+}
+```
+
+
+#3
+``` {r num3}
+n <- as.integer(readline(prompt = "Enter a number to start the Fibonacci sequence: "))
+
+a <- 0
+b <- 1
+
+repeat {
+  fib <- a + b
+  if (fib > 500) {
+    break
+  }
+  if (a >= n) {
+    cat(a, " ")
+  }
+  a <- b
+  b <- fib
+}
+```
+
+
